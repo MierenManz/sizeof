@@ -42,8 +42,8 @@ function sizeof<T>(object: T): size {
   const returnobj: size = {
     bytesize: buffer,
     KiB: buffer / 1024,
-    MiB: buffer / (1024 ^ 2),
-    GiB: buffer / (1024 ^ 3),
+    MiB: buffer / (1024 * 1024),
+    GiB: buffer / (1024 * 1024 * 1024),
     size: formatSize(buffer),
   };
   return returnobj;
