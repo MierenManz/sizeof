@@ -1,4 +1,4 @@
-interface size {
+export interface size {
   bytesize: number;
   KiB: number;
   MiB: number;
