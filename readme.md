@@ -4,7 +4,7 @@
 
 ```ts
 // import sizeof
-import sizeof from "./mod.ts";
+import sizeof from "https://deno/land/x/sizeof@v1.0.3/mod.ts";
 
 //calculate size of object
 const obj = {
@@ -75,7 +75,7 @@ Expected output:
 
 - Skyler "MierenMans" van Boheemen
 
-## Licence
+## License
 
 Copyright 2021 Skyler "MierenMans" van Boheemen
 
