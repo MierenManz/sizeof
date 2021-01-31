@@ -6,7 +6,6 @@ export interface size {
   size: string;
 }
 
-
 function formatSize(buff: number): string {
   if (buff < 1024) return buff + "B";
   if (buff < 1024 ** 2) return (buff / 1024).toFixed(2) + "KiB";
@@ -16,7 +15,6 @@ function formatSize(buff: number): string {
   }
   return (buff / 1024 ** 4).toFixed(2) + "TiB";
 }
-
 
 export function sizeof<T>(object: T): size {
   let buffer = 0;
@@ -30,10 +28,10 @@ export function sizeof<T>(object: T): size {
     buffer += 4;
   }
   if (typeof object === "object") {
-    Object.entries(object).forEach(element => {
+    Object.entries(object).forEach((element) => {
       if (!Array.isArray(object)) buffer += new Blob(element[0].split("")).size;
-      buffer += sizeof(element[1]).bytesize
-    })
+      buffer += sizeof(element[1]).bytesize;
+    });
   }
   const returnobj: size = {
     bytesize: buffer,
