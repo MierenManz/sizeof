@@ -1,4 +1,4 @@
-import sizeof from "./mod.ts";
+import { sizeof } from "./mod.ts";
 Deno.test({
   name: "sizeof object",
   fn: () => {
